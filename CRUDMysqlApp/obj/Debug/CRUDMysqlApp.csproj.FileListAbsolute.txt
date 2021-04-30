@@ -7,3 +7,12 @@ C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_05_ETLs_External
 C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_05_ETLs_ExternalTransferLoad\crud-mysql-cs\src\CRUDMysqlApp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.csproj.CopyComplete
 C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_05_ETLs_ExternalTransferLoad\crud-mysql-cs\src\CRUDMysqlApp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.exe
 C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_05_ETLs_ExternalTransferLoad\crud-mysql-cs\src\CRUDMysqlApp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.pdb
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\bin\Debug\CRUDMysqlApp.exe.config
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\bin\Debug\CRUDMysqlApp.exe
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\bin\Debug\CRUDMysqlApp.pdb
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\bin\Debug\MySql.Data.dll
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.csprojAssemblyReference.cache
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.csproj.CoreCompileInputs.cache
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.csproj.CopyComplete
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.exe
+C:\Users\filipegutemberg\Documents\IntegracaoDeSistemas\IS_Aula_04_Base_Dados\simpleCRUDCSharp\CRUDMysqlApp\obj\Debug\CRUDMysqlApp.pdb

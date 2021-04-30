@@ -186,5 +186,163 @@ namespace CRUDMysqlApp
                 Console.WriteLine("Error: " + e.Message);
             }
         }
+        public void DeleteUserSP(int idUsuario)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                Console.WriteLine("Connected");
+
+                string query = "CALL `SP_GATILHO`(@p0, @p1, @p2, @p3, @p4)"; 
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.Add("@p0", MySqlDbType.Int32);
+                cmd.Parameters[0].Value = 3;
+                cmd.Parameters.Add("@p1", MySqlDbType.Int32);
+                cmd.Parameters[1].Value = idUsuario;
+                cmd.Parameters.Add("@p2", MySqlDbType.VarChar, 55);
+                cmd.Parameters[2].Value = "";
+                cmd.Parameters.Add("@p3", MySqlDbType.VarChar, 55);
+                cmd.Parameters[3].Value = "";
+                cmd.Parameters.Add("@p4", MySqlDbType.VarChar, 55);
+                cmd.Parameters[4].Value = "";
+
+                Console.Write("Deleting data....");
+                //cmd.Parameters[0].Value = id;
+
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Done");
+
+
+                conn.Close();
+                Console.WriteLine("Closed");
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+
+        }
+
+        public void CreateUserSP(string nome, string endereco, string garantia)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                Console.WriteLine("Connected");
+
+                string query = "CALL `SP_GATILHO`(@p0, @p1, @p2, @p3, @p4)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.Add("@p0", MySqlDbType.Int32);
+                cmd.Parameters[0].Value = 1;
+                cmd.Parameters.Add("@p1", MySqlDbType.Int32);
+                cmd.Parameters[1].Value = 0;
+                cmd.Parameters.Add("@p2", MySqlDbType.VarChar, 55);
+                cmd.Parameters[2].Value = nome;
+                cmd.Parameters.Add("@p3", MySqlDbType.VarChar, 55);
+                cmd.Parameters[3].Value = endereco;
+                cmd.Parameters.Add("@p4", MySqlDbType.VarChar, 55);
+                cmd.Parameters[4].Value = garantia;
+
+                Console.Write("Creating user....");
+                //cmd.Parameters[0].Value = id;
+
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Done");
+
+
+                conn.Close();
+                Console.WriteLine("Closed");
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+
+        }
+
+        public void UpdateUserSP(int idUsuario, string novoNome, string novoEndereco, string novaGarantia)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                Console.WriteLine("Connected");
+
+                string query = "CALL `SP_GATILHO`(@p0, @p1, @p2, @p3, @p4)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.Add("@p0", MySqlDbType.Int32);
+                cmd.Parameters[0].Value = 2;
+                cmd.Parameters.Add("@p1", MySqlDbType.Int32);
+                cmd.Parameters[1].Value = idUsuario;
+                cmd.Parameters.Add("@p2", MySqlDbType.VarChar, 55);
+                cmd.Parameters[2].Value = novoNome;
+                cmd.Parameters.Add("@p3", MySqlDbType.VarChar, 55);
+                cmd.Parameters[3].Value = novoEndereco;
+                cmd.Parameters.Add("@p4", MySqlDbType.VarChar, 55);
+                cmd.Parameters[4].Value = novaGarantia;
+
+                Console.Write("Updating user....");
+                //cmd.Parameters[0].Value = id;
+
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Done");
+
+
+                conn.Close();
+                Console.WriteLine("Closed");
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+
+        }
+
+        public void ListarUsuariosSP()
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                Console.WriteLine("Connected");
+
+                string query = "CALL `SP_GATILHO`(@p0, @p1, @p2, @p3, @p4)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.Add("@p0", MySqlDbType.Int32);
+                cmd.Parameters[0].Value = 4;
+                cmd.Parameters.Add("@p1", MySqlDbType.Int32);
+                cmd.Parameters[1].Value = 0;
+                cmd.Parameters.Add("@p2", MySqlDbType.VarChar, 55);
+                cmd.Parameters[2].Value = "";
+                cmd.Parameters.Add("@p3", MySqlDbType.VarChar, 55);
+                cmd.Parameters[3].Value = "";
+                cmd.Parameters.Add("@p4", MySqlDbType.VarChar, 55);
+                cmd.Parameters[4].Value = "";
+                
+                MySqlDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    Console.WriteLine("Id: " + rd["numero_aluno"].ToString());
+                    Console.WriteLine("nome: " + rd["nome"].ToString());
+                    Console.WriteLine("Endereco: " + rd["endereco"].ToString());
+                    Console.WriteLine("Garantia: " + rd["garantia"].ToString());
+                    Console.WriteLine("---------------------------");
+                }
+
+                rd.Close();
+
+                conn.Close();
+                Console.WriteLine("Closed");
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+
+        }
+
     }
 }
